@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="siddhesh.jpg" alt="hello" class="profile-photo">
+            <h1>Siddhesh Gawade</h1>
+            <p>Artificial Intelligence and Machine Learning </p>
+        </div>
+    </header>
+    
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="#about" class="animate">About Me</a></li>
+            <li><a href="#skills" class="animate">Skills</a></li>
+            <li><a href="#contact" class="animate">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- Rest of the HTML code remains the same -->
+    <section id="about" class="animate">
+        <div class="container" style="font-size: large">
+            <h2>About Me</h2><br><br><br>
+            <p>I am a passionate web developer with experience in Python, Java and databases like MySQL. I love to build eye catching web applications and work on various web development projects.</p>
+            <h2>Background</h2>
+            <p>I was born and raised in Vengurla ,Maharasthra and from a young age, I was fascinated by technology and how it could be used to solve real-world problems. I spent countless hours tinkering with computers and learning to code, and I knew that I wanted to pursue a career in tech.</p>
+            <h2>Education</h2>
+            <ul>
+                <li><strong> 10th in SSC :</strong> SVN English Medium School (2008-2020)</li>
+
+                <li><strong>Diploma in Computer Engineering :</strong> Government Polytechnic Malvan (2020-2023)</li>
+                <li>Relevant coursework: Data Structures and Algorithms, C, C++, Java, JavaScript, CSS ,HTML ,Python</li>
+
+                <li><strong>Persuing Bachelor's Degree in Artificial Intelligence and Machine Learning :</strong>,Shivajirao S Jondhale College of Engineering Vishnu Nagar Dombivli (West) Dist Thane (2023-2026)</li>
+                <li>Relevant coursework: Artificial Intelligence, Machine learning, Advanced Java , Advanced Python </li>
+            </ul>
+            
+    </section> 
+
+    <section id="skills" class="animate">
+        <div class="container">
+            <h2>Skills</h2><br><br><br>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>Web Development</h3>
+                    <p>Expertise in HTML, CSS, JavaScript.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Python</h3>
+                    <p>Skilled in Python programming with high proficiency in different Python libraries like TensorFlow ,Keras ,Numpy ,Pandas etc.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Java</h3>
+                    <p>Skilled in Java programming and also learned OOPS concept in deep.</p>
+                </div>
+            </div>
+        </div>
+    </section><br><br>
+
+    <section id="contact" class="animate">
+        <div class="container">
+            <h2>Contact</h2><br><br>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea><br><br>
+                <button type="submit" class="btn">Send Message</button><br><br><br>
+            </form>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/siddhesh-gawade-9b7196321" target="_blank">LINKEDIN</a>
+                <a href="https://github.com/Siddhesh51" target="_blank">GITHUB</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="font-size: large">
+            <p>&copy; 2024 Siddhesh51. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+// Get the elements that should be animated
+const elementsToAnimate = document.querySelectorAll('.animate');
+
+// Function to check if an element is in view
+function isElementInView(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to add animation class when element comes into view
+function animateElement(element) {
+  if (isElementInView(element)) {
+    element.classList.add('animate-fade-in');
+  }
+}
+
+// Create an IntersectionObserver instance
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      animateElement(entry.target);
+    }
+  });
+}, {
+  threshold: 0.5, // Trigger the animation when the element is 50% visible
+});
+
+// Observe the elements
+elementsToAnimate.forEach((element) => {
+  observer.unobserve(element); // Unobserve all elements initially
+});
+
+// Add event listener to navbar links
+document.querySelectorAll('nav ul li a').forEach((anchor) => {
+  anchor.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = anchor.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+
+    // Remove animation class from all elements
+    elementsToAnimate.forEach((element) => {
+      element.classList.remove('animate-fade-in', 'animate-scale-up', 'animate-slide-in');
+    });
+
+    // Add animation class to the target element
+    if (targetId === '#about') {
+      targetElement.classList.add('animate-slide-in');
+    } else if (targetId === '#skills') {
+      targetElement.classList.add('animate-scale-up');
+    } else if (targetId === '#contact') {
+      targetElement.classList.add('animate-fade-in');
+    }
+
+    // Scroll to the target element
+    targetElement.scrollIntoView({
+      behavior: 'smooth',
+    });
+  });
+});
+// Add event listener to window scroll
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('nav');
+    const scrollPosition = window.scrollY;
+  
+    if (scrollPosition > 200) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });  // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Sticky Navigation on Scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const sticky = navbar.offsetTop;
+
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+            }
+        });
+
+        // Form Submission Handler
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you shortly.');
+            this.reset();
+        });
+
+
+    </script>
+</body>
+</html>

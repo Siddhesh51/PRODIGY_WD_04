@@ -1,0 +1,320 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light gray background */
+  animation: fade-in 2s ease-in-out;
+}
+
+img {
+  width: 20%; /* Reduce the width of the image */
+  height: auto;
+  margin: 20px auto; /* Add some margin to create space between the navbar and the image */
+  display: block;
+  border-radius: 10px; /* Add a slight border radius to the image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: scale-up 2s ease-in-out;
+}
+
+header {
+  background-color: #3498db; /* Blue background */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  animation: slide-in 2s ease-in-out;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #ffd700; /* Golden color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+  margin: 0;
+  font-size: 18px;
+  color: #ccc; /* Light gray color */
+}
+
+nav {
+  background-color: #333; /* Dark gray background */
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: sticky; /* Make the navbar sticky */
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: fade-in 2s ease-in-out;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around; /* Change to space-around to add tab space */
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 10px; /* Add padding to create tab space */
+  
+}
+
+
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #ffd700; /* Golden color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+section {
+  padding: 20px;
+  animation: fade-in 2s ease-in-out;
+}
+
+#about {
+  background-color: #f7f7f7; /* Light gray background */
+  animation: slide-in 2s ease-in-out;
+}
+
+#about h2 {
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#about p {
+  font-size: 18px;
+  color: #666;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+#about .about-text {
+  font-size: 18px;
+  color: #666;
+  text-align: justify;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#skills {
+  background-color: #e5e5e5; /* Light gray background */
+  animation: scale-up 2s ease-in-out;
+}
+
+#skills h2 {
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#skills .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+#skills .skill-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#skills .skill-item:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+#skills .skill-item h3 {
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#skills .skill-item p {
+  font-size: 18px;
+  color: #666;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Rest of the code remains the same */
+
+#contact {
+  background-color: #f7f7f7; /* Light gray background */
+  animation: fade-in 2s ease-in-out;
+  padding: 20px;
+}
+
+#contact h2 {
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+#contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: scale-up 2s ease-in-out;
+}
+
+#contact-form input, #contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#contact-form button[type="submit"] {
+  background-color: #4CAF50; /* Green background */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  animation: fade-in 2s ease-in-out;
+}
+
+#contact-form button[type="submit"]:hover {
+  background-color: #3e8e41;
+  color: #fff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#contact-form button[type="submit"]:active {
+  background-color: #2f6f31;
+  color: #fff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.social-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-links a {
+  color: #333;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: color 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  color: #ffd700; /* Golden color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Add a sticky footer */
+footer {
+
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  animation: fade-in 2s ease-in-out;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+footer a:hover {
+  color: #ffd700; /* Golden color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}/* Animation classes */
+.animate-fade-in {
+  animation: fade-in 2s ease-in-out;
+}
+
+.animate-scale-up {
+  animation: scale-up 2s ease-in-out;
+}
+
+.animate-slide-in {
+  animation: slide-in 2s ease-in-out;
+}
+
+/* Rest of the code remains the same */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+nav.scrolled {
+  padding: 5px;
+  font-size: 14px;
+}
+
+nav.scrolled ul li {
+  padding: 5px;
+}
+
+nav.scrolled ul li a {
+  font-size: 14px;
+}
+nav {
+  transition: padding 0.2s ease-in-out, font-size 0.2s ease-in-out;
+}
+
+nav ul li {
+  transition: padding 0.2s ease-in-out;
+}
+
+nav ul li a {
+  transition: font-size 0.2s ease-in-out;
+}
